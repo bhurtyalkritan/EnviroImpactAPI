@@ -42,7 +42,7 @@ def example_carbon_emissions():
         "energy_usage_kwh": 600,
         "miles_driven": 1200,
         "other_sources": 1.5,
-        "total_emission": 0  # Will be calculated by the API
+        "total_emission": 0  
     }
     response = requests.put(f"{BASE_URL}/carbon_emissions/1", json=updated_carbon_emission_data)
     print("PUT /carbon_emissions/1")
