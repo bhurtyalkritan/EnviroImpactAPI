@@ -51,7 +51,7 @@ def get_carbon_emission(emission_id: int):
 
 @app.post("/carbon_emissions", response_model=CarbonEmission)
 def create_carbon_emission(emission: CarbonEmission):
-    # Example emission factors (can be updated based on more accurate data)
+    # Example emission factors 
     emission_factor_energy = 0.000233  # metric tons CO2 per kWh
     emission_factor_miles = 0.000404  # metric tons CO2 per mile
 
@@ -145,8 +145,8 @@ def get_deforestation_impact_by_id(impact_id: int):
 @app.post("/deforestation_impact", response_model=DeforestationImpact)
 def create_deforestation_impact(impact: DeforestationImpact):
     # Example estimation logic
-    impact.estimated_trees_cut = impact.product_weight * 0.02  # assuming 0.02 trees per kg
-    impact.estimated_animals_displaced = impact.product_weight * 0.01  # assuming 0.01 animals per kg
+    impact.estimated_trees_cut = impact.product_weight * 0.02 
+    impact.estimated_animals_displaced = impact.product_weight * 0.01  
     deforestation_data.append(impact)
     return impact
 
